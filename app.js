@@ -12,7 +12,7 @@ app.use(cors());
 app.get('/status', function (req, res) {
   var random = Math.floor(Math.random() * (MAX-MIN)+MIN);
   if (random>LEVEL) {
-    res.send('GREEN');
+    res.send('BLUE');
   } else {
       res.status(500);
       res.send('ERROR');
