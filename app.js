@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 const MIN = 0;
 const MAX = 100;
-const LEVEL = 0;
+const LEVEL = 80;
 
 app.use(cors());
 
@@ -12,7 +12,7 @@ app.use(cors());
 app.get('/status', function (req, res) {
   var random = Math.floor(Math.random() * (MAX-MIN)+MIN);
   if (random>LEVEL) {
-    res.send('BLUE');
+    res.send('GREEN');
   } else {
       res.status(500);
       res.send('ERROR');
